@@ -1,0 +1,153 @@
+@font-face {
+    font-family: logoFont;
+    src: url(./fonts/Exo-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: hotsFont;
+    src: url(./fonts/Exo-Light.ttf);
+}
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  /* background-image: url(./images/logo-back.jpg); */
+}
+
+video {
+    object-fit: contain;
+}
+
+#bg-video {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    transition: opacity 1.0s ease-in-out;
+}
+
+a {
+  color: white;
+}
+
+.logo {
+  font-family: logoFont;
+}
+
+.logo-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.search-box {
+  padding: 20px 10px;
+}
+
+.app-root {
+   background-color: #070110;
+   font-family: hotsFont;
+   color: #fff;
+   text-shadow: 2px 2px #5b0a87;
+   width: 50%;
+}
+
+.heroes-preview {
+  /*margin: auto;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-preview {
+  margin: 5px;
+  border-style: solid;
+  border-color: #6DB1EB;
+  border-width: 2px;
+}
+
+.hero-preview-tooltip {
+  border-top-color: #6DB1EB !important;
+  border-top-style: solid !important;
+  border-top-width: 4px !important;
+}
+
+.hero-name {
+  font-weight: bold;
+}
+
+.hero-role {
+
+}
+
+.hero-details-name {
+  font-size: 20px;
+  margin: 5px 0px;
+}
+
+.hero-abilities {
+  display:inline-block;
+  background-color: #6DB1EB;
+}
+
+.hero-tooltip {
+  max-width: 250px;
+  display: inline-block;
+  word-wrap: break-word;
+  border-top-color: #6DB1EB !important;
+  border-top-style: solid !important;
+  border-top-width: 4px !important;
+}
+
+.hero-abilities-image {
+  width: 50px;
+  height: 50px;
+  margin: 1px 1px;
+}
+
+.hero-talent {
+  display: inline-block;
+   /** background-color: #6DB1EB; */
+}
+
+.hero-talent-image {
+  width: 50px;
+  height: 50px;
+  margin: 1px 1px;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.hero-talentTier {
+  margin: 10px;
+}
+
+.hero-talentTier-level {
+  margin: 10px;
+}
+
+.hero-body {
+  display: flex;
+}
+
+.hero-details-builds {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+
+.hero-details-build {
+  max-width: 200px;
+  flex-grow: 1;
+  margin: 10px 10px;
+  padding: 5px;
+}
+
+.highlight {
+  border-width: 2px;
+  border-style: solid;
+  border-color: gold;
+}

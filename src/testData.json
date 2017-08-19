@@ -1,0 +1,94 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Thrall",
+      "role": "Melee assassin",
+      "icon": "/icons/thrall.png"
+    },
+    {
+      "id": 2,
+      "name": "Uther",
+      "role": "Support",
+      "icon": "/icons/uther.png"
+    },
+    {
+      "id": 3,
+      "name": "Abathur",
+      "role": "Specialist",
+      "icon": "/icons/abathur.png"
+    },
+    {
+      "id": 4,
+      "name": "Valla",
+      "role": "Ranged assassin",
+      "icon": "/icons/valla.png"
+    },
+    {
+      "id": 5,
+      "name": "Alarak",
+      "role": "Assassin",
+      "icon": "/icons/alarak.png"
+    },
+    {
+      "id": 6,
+      "name": "Anub'arak",
+      "role": "Warrior",
+      "icon": "/icons/anub'arak.png"
+    },
+    {
+      "id": 7,
+      "name": "Artanis",
+      "role": "Warrior",
+      "icon": "/icons/artanis.png"
+    },
+    {
+      "id": 8,
+      "name": "Arthas",
+      "role": "Warrior",
+      "icon": "/icons/arthas.png"
+    },
+    {
+      "id": 9,
+      "name": "Auriel",
+      "role": "Support",
+      "icon": "/icons/auriel.png"
+    },
+    {
+      "id": 10,
+      "name": "Azmodan",
+      "role": "Specialist",
+      "icon": "/icons/azmodan.png"
+    },
+    {
+      "id": 11,
+      "name": "Brightwing",
+      "role": "Support",
+      "icon": "/icons/brightwing.png"
+    },
+    {
+      "id": 12,
+      "name": "Cassia",
+      "role": "Assassin",
+      "icon": "/icons/cassia.png"
+    },
+    {
+      "id": 13,
+      "name": "Chen",
+      "role": "Warrior",
+      "icon": "/icons/chen.png"
+    },
+    {
+      "id": 14,
+      "name": "Cho",
+      "role": "Warrior",
+      "icon": "/icons/cho.png"
+    },
+    {
+      "id": 15,
+      "name": "Chromie",
+      "role": "Ranged assassin",
+      "icon": "/icons/chromie.png"
+    }
+  ]
+}
