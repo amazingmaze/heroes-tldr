@@ -22,7 +22,7 @@ class TalentTier extends Component {
     return (
       <div className="hero-talentTier">
         {this.props.talents.map(talentTier => (
-          <div key={talentTier.lvl} className="hero-talentTier-level">
+          <div key={Math.random()} className="hero-talentTier-level">
             <span>{talentTier.lvl}</span>
             {talentTier.talents.map( talent => ( this.checkSelected(talent) ) )}
 

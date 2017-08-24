@@ -22,7 +22,14 @@ class Builds extends Component {
                 <p>This is the build desc adsasdasd asd asd as das das dasd as dasd as s ad asd asd asd as </p>
               </div>
             </div>
-          ) : ''
+          ) : (
+            <div key={build.id}>
+              <div className={'hero-details-build' +  this.selectBuild(build) } onClick={ () => { this.props.highlight(build); }}>
+                <p>Build</p>
+                <p>This is the build desc adsasdasd asd asd as das das dasd as dasd as s ad asd asd asd as </p>
+              </div>
+            </div>
+          )
 
         ) )}
         <hr />

@@ -3,6 +3,7 @@ import Header from './Header';
 import HeroesList from './HeroesList';
 import HeroDetail from './HeroDetail';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import Search from './Search';
 
 class App extends React.Component {
   state = {
@@ -24,18 +25,27 @@ class App extends React.Component {
 
     const HeroDetailPage = (props) => {
       return (
-        <HeroDetail {...props}/>
+        <HeroDetail key={Math.random()} {...props}/>
       );
     };
+
 
     return (
       <div>
         <BrowserRouter>
           <div>
-            <Header message={this.state.pageHeader}/>
+
+            <div className="header">
+              <div className="logo">
+                <Header message={this.state.pageHeader}/>
+              </div>
+              <div className="search-box">
+                <Search heroes={this.state.data}/>
+              </div>
+            </div>
             <Switch>
               <Route exact path='/' render={HeroesListPage}/>
-              <Route path='/heroes/:name' render={HeroDetailPage}/>
+              <Route path='/heroes/:name' render={HeroDetailPage} />
             </Switch>
           </div>
         </BrowserRouter>

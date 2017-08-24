@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const HeroesList = ({ heroes }) => (
   <div className="heroes-preview">
     {heroes.map(hero =>
-      <Link to={'/heroes/' + hero[0].name} key={hero[0].name}>
+      <Link to={'/heroes/' + hero.name} key={Math.random()}>
         <HeroPreview {...hero}/>
       </Link>
     )}

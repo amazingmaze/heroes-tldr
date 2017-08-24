@@ -10,6 +10,7 @@ class HeroDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      key: 1,
       hero: {
         name: '',
         abilities: [ {
@@ -59,6 +60,14 @@ class HeroDetail extends Component {
     this.state.showTalents ? this.setState( {showTalents: false} ) : this.setState( {showTalents: true} );
   }
 
+  componentWillReceiveProps(newProps){
+    if(newProps.params.key != this.state.key){
+      this.setState({
+        key: newProps.params.key
+      });
+    }
+  }
+
   componentDidMount() {
 
     this.setState( { showAbilites: true });
@@ -67,7 +76,7 @@ class HeroDetail extends Component {
 
     axios.get('/api/heroes/' + this.props.match.params.name)
       .then(resp => {
-        this.setState({ hero: resp.data.data[0]});
+        this.setState({ hero: resp.data.data});
       })
       .catch(console.error);
   }

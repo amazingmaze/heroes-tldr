@@ -10,9 +10,6 @@ const Header = ({message}) => {
           <img src='./images/logo-400-133.png' className="logo-image" />
         </div>
       </Link>
-      <div className='search-box'>
-        <input className="form-control input-sm" type="text" placeholder="Search" />
-      </div>
     </div>
   );
 };

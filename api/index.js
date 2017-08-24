@@ -6,8 +6,7 @@ const router = express.Router();
 
 router.get('/heroes', (req, res) => {
 
-  axios.get('http://localhost:1337/api/heroes').then( function(response) {
-    //console.log(response.data);
+  axios.get('http://localhost:1337/api/heroes/').then( function(response) {
     res.send({ data: response.data });
   });
 
