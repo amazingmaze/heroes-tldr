@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 class Search extends Component {
 
@@ -9,15 +9,17 @@ class Search extends Component {
     this.state = {
       value: '',
       suggestions: [],
-      data: []
+      data: [],
+      redirect: false
     };
+
   }
 
-  onChange = (event, { newValue }) => {
+  onChange = (event, { newValue, method }) => {
     this.setState({
       value: newValue
     });
-  }
+  };
 
   componentDidMount() {
     var filterData = () => {
@@ -32,7 +34,7 @@ class Search extends Component {
 
   renderSuggestion = (suggestion) => {
     return (
-      <Link to={'/heroes/' + suggestion.name} key={suggestion.name} className="suggestion-content">
+      <Link to={'/heroes/' + suggestion.name} key={suggestion.name}  className="suggestion-content">
         <img src={suggestion.img} className="searchResult-image" />
         <div className="searchResult-text">
           {suggestion.name}
@@ -63,8 +65,19 @@ class Search extends Component {
     });
   }
 
-  onSuggestionSelected = (event, { suggestion }) => {
-    // Do nothing
+  onSuggestionSelected = (event, { suggestion, method }) => {
+    if(method === 'enter'){
+      this.setState({
+        redirect: true
+      });
+    } else {
+      this.setState({
+        value: '',
+      });
+    }
+  };
+
+  onBlur = () => {
     this.setState({
       value: ''
     });
@@ -75,8 +88,21 @@ class Search extends Component {
     const inputProps = {
       value: this.state.value,
       onChange: this.onChange,
-      placeholder: 'Search for a hero'
+      placeholder: 'Search for a hero',
+      onBlur: this.onBlur
     };
+
+    // TODO: Find some other way to redirect on 'enter'. The current structure causes 2 renders.
+    // not an approved design. Works for now..
+    if(this.state.redirect){
+      let hero = this.state.value;
+      this.setState({
+        value: '',
+        redirect: false
+      });
+      return <Redirect to={`/heroes/${hero}`} />
+    }
+
     return (
       <Autosuggest
         suggestions={suggestions}
@@ -86,6 +112,7 @@ class Search extends Component {
         onSuggestionSelected={this.onSuggestionSelected}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        highlightFirstSuggestion={true}
       />
     );
   }

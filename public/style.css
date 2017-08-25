@@ -10,7 +10,7 @@
 
 .header {
   display:flex;
-  justify-content: center;
+  justify-content: space-between;
   /* background-image: url(./images/logo-back.jpg); */
 }
 
@@ -139,22 +139,20 @@ a {
 .hero-details-builds {
   margin: 10px;
   display: flex;
-  justify-content: space-between;
   cursor: pointer;
+  flex-direction: column;
 
 }
 
 .hero-details-build {
-  max-width: 200px;
   flex-grow: 1;
-  margin: 10px 10px;
-  padding: 5px;
 }
 
 .highlight {
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: gold;
+  padding: 2px;
 }
 
 /*SEARCH-STYLING*/

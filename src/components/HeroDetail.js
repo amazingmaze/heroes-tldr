@@ -50,8 +50,6 @@ class HeroDetail extends Component {
     };
   }
 
-
-
   toggleAbilities() {
     this.state.showAbilites ? this.setState( {showAbilites: false} ) : this.setState( {showAbilites: true} );
   }
@@ -82,7 +80,6 @@ class HeroDetail extends Component {
   }
 
   highlightBuild(build) {
-    console.log('Selected build: ', build.name);
     this.setState( { selectedBuild: build});
   }
 
