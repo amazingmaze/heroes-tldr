@@ -2,11 +2,9 @@ import config from './config';
 import express from 'express';
 import apiRouter from './api';
 
-
 const server = express();
 
-// Currently not working
-const serverRendering = false;
+const serverRendering = true;
 
 server.set('view engine', 'ejs');
 

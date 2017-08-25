@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import HeroesList from './HeroesList';
 import HeroDetail from './HeroDetail';
-import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Search from './Search';
 
 class App extends React.Component {
@@ -32,23 +32,20 @@ class App extends React.Component {
 
     return (
       <div>
-        <BrowserRouter>
-          <div>
-
-            <div className="header">
-              <div className="logo">
-                <Header message={this.state.pageHeader}/>
-              </div>
-              <div className="search-box">
-                <Search heroes={this.state.data}/>
-              </div>
+        <div>
+          <div className="header">
+            <div className="logo">
+              <Header message={this.state.pageHeader}/>
             </div>
-            <Switch>
-              <Route exact path='/' render={HeroesListPage}/>
-              <Route path='/heroes/:name' render={HeroDetailPage} />
-            </Switch>
+            <div className="search-box">
+              <Search heroes={this.state.data}/>
+            </div>
           </div>
-        </BrowserRouter>
+          <Switch>
+            <Route exact path='/' render={HeroesListPage}/>
+            <Route path='/heroes/:name' render={HeroDetailPage} />
+          </Switch>
+        </div>
       </div>
     );
   }

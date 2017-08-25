@@ -34,12 +34,11 @@ class Search extends Component {
 
   renderSuggestion = (suggestion) => {
     return (
-      <Link to={'/heroes/' + suggestion.name} key={suggestion.name}  className="suggestion-content">
-        <img src={suggestion.img} className="searchResult-image" />
-        <div className="searchResult-text">
+      <div className="suggestion-content">
+        <Link to={'/heroes/' + suggestion.name} key={suggestion.name}>
           {suggestion.name}
-        </div>
-      </Link>
+        </Link>
+      </div>
     );
   }
 
@@ -88,7 +87,7 @@ class Search extends Component {
     const inputProps = {
       value: this.state.value,
       onChange: this.onChange,
-      placeholder: 'Search for a hero',
+      placeholder: 'Search for a hero..',
       onBlur: this.onBlur
     };
 

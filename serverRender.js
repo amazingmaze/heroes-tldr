@@ -7,8 +7,9 @@ import App from './src/components/App';
 import StaticRouter from 'react-router-dom/StaticRouter';
 
 
-const serverRender = (location) =>
-  axios.get(`${config.serverUrl}/api/heroes`)
+const serverRender = (location) => {
+  
+  return axios.get(`${config.serverUrl}/api/heroes`)
     .then(resp => {
       let context = {};
       return ReactDOMServer.renderToString(
@@ -17,5 +18,6 @@ const serverRender = (location) =>
         </StaticRouter>
       );
     });
+};
 
 export default serverRender;

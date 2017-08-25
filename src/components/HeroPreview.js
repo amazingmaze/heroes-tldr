@@ -10,9 +10,10 @@ class HeroPreview extends Component {
 
   render() {
     return (
-      <div>
+      <div className="hero-preview-item">
         <ReactTooltip class="hero-preview-tooltip" place='top' effect='solid'/>
         <div onClick={this.handleClick}>
+          <p> {this.props.name} </p>
           <img src={this.props.image} className="hero-preview-image" data-tip= { this.props.name } />
         </div>
       </div>
