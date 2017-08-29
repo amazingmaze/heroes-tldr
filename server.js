@@ -8,6 +8,9 @@ const serverRendering = true;
 
 server.set('view engine', 'ejs');
 
+
+server.use('/api', apiRouter);
+
 import serverRender from './serverRender';
 server.get('/', (req, res) => {
   if(serverRendering) {
@@ -25,8 +28,11 @@ server.get('/', (req, res) => {
   }
 });
 
+server.get('/heroes/*', (req, res) => {
+  res.redirect('/');
+});
+
 server.use(express.static('public'));
-server.use('/api', apiRouter);
 
 server.listen(config.port, config.host, () => {
   console.info('Server listening on port ', config.port);

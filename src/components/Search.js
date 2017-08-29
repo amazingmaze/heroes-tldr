@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Autosuggest from 'react-autosuggest';
-import {Link, Redirect} from 'react-router-dom';
+import {Link, Redirect } from 'react-router-dom';
 
 class Search extends Component {
 

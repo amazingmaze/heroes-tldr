@@ -8,14 +8,11 @@ import StaticRouter from 'react-router-dom/StaticRouter';
 
 
 const serverRender = (location) => {
-  
   return axios.get(`${config.serverUrl}/api/heroes`)
     .then(resp => {
       let context = {};
       return ReactDOMServer.renderToString(
-        <StaticRouter context ={context} location={location}>
-          <App initialData={resp.data.data}/>
-        </StaticRouter>
+        <StaticRouter context={context} location={location}><App initialData={resp.data.data}/></StaticRouter>
       );
     });
 };

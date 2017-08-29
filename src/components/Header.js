@@ -7,7 +7,7 @@ const Header = ({message}) => {
     <div className="header">
       <Link to='/'>
         <div className="logo">
-          <img src='./images/logo-400-133.png' className="logo-image" />
+          <img src='./images/logo-400-133.png' alt="Logo!" className="logo-image" />
         </div>
       </Link>
     </div>
