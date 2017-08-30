@@ -4,15 +4,11 @@ import PropTypes from 'prop-types';
 
 class HeroPreview extends Component {
 
-  handleClick = () => {
-    console.log(this.props.name);
-  }
-
   render() {
     return (
       <div className="hero-preview-item">
         <ReactTooltip class="hero-preview-tooltip" place='top' effect='solid'/>
-        <div onClick={this.handleClick}>
+        <div>
           <p> {this.props.name} </p>
           <img src={this.props.image} className="hero-preview-image" data-tip= { this.props.name } />
         </div>

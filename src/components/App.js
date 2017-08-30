@@ -31,7 +31,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <div>
+        <div id="content">
           <div className="header">
             <div className="logo">
               <Header message={this.state.pageHeader}/>
@@ -44,6 +44,7 @@ class App extends React.Component {
             <Route exact path='/' render={HeroesListPage}/>
             <Route path='/heroes/:name' render={HeroDetailPage} />
           </Switch>
+          <br />
         </div>
       </div>
     );

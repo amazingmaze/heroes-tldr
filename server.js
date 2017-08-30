@@ -35,5 +35,5 @@ server.get('/heroes/*', (req, res) => {
 server.use(express.static('public'));
 
 server.listen(config.port, config.host, () => {
-  console.info('Server listening on port ', config.port);
+  console.info('Server listening on ' + config.host + ':' + config.port);
 });
