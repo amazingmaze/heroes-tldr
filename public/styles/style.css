@@ -13,6 +13,18 @@
   justify-content: space-between;
   /* background-image: url(./images/logo-back.jpg); */
 }
+.spinner-container {
+  margin: 0;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-img {
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
 
 #footer {
   justify-content: center;
@@ -137,6 +149,10 @@ a {
   cursor: pointer;
 }
 
+.toggle {
+  cursor: pointer;
+}
+
 .hero-talentTier {
   margin: 10px;
 }
@@ -158,7 +174,28 @@ a {
 }
 
 .hero-details-build {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  border-bottom-color: #6DB1EB !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  width: 250px;
+}
+
+.hero-counters {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-details-tables {
+  margin: 10px;
+  padding: 10px;
+}
+
+.hero-counters-img {
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  cursor: pointer;
 }
 
 .highlight {

@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 import StackGrid from 'react-stack-grid';
 
 const HeroesList = ({ heroes }) => (
+
   <StackGrid columnWidth="100%">
     <div key={Math.random()} className="heroes-preview">
       {heroes.map(hero =>

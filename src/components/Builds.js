@@ -13,15 +13,18 @@ class Builds extends Component {
 
   render() {
     return (
-      <div className="hero-details-builds">
-        {this.props.icybuilds.map( (build) => (
-          <div key={build.id}>
-            <div className={'hero-details-build' +  this.selectBuild(build) } onClick={ () => { this.props.highlight(build); }}>
-              <p>{build.name ? build.name : 'Build'}</p>
+      <div>
+        <h3> Builds </h3>
+        <div className="hero-details-builds">
+          {this.props.icybuilds.map( (build) => (
+            <div key={build.id}>
+              <div className={'hero-details-build' +  this.selectBuild(build) } onClick={ () => { this.props.highlight(build); }}>
+                <h4>{build.name ? build.name : 'Build'}</h4>
+              </div>
             </div>
-          </div>
-        ) )}
-        <hr />
+          ) )}
+          <hr />
+        </div>
       </div>
     );
   }
